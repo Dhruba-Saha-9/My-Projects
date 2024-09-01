@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Bank Management System</h1>
+    <div id="form-container">
+        <h2>Create Account</h2>
+        <form id="create-account-form">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="number" id="initialDeposit" placeholder="Initial Deposit" required>
+            <button type="submit">Create Account</button>
+        </form>
+
+        <h2>Deposit</h2>
+        <form id="deposit-form">
+            <input type="number" id="depositAccountId" placeholder="Account ID" required>
+            <input type="number" id="depositAmount" placeholder="Amount" required>
+            <button type="submit">Deposit</button>
+        </form>
+
+        <h2>Withdraw</h2>
+        <form id="withdraw-form">
+            <input type="number" id="withdrawAccountId" placeholder="Account ID" required>
+            <input type="number" id="withdrawAmount" placeholder="Amount" required>
+            <button type="submit">Withdraw</button>
+        </form>
+
+        <h2>Check Balance</h2>
+        <form id="check-balance-form">
+            <input type="number" id="balanceAccountId" placeholder="Account ID" required>
+            <button type="submit">Check Balance</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
