@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result.css') }}">
+    <title>Book Recommendations</title>
+</head>
+<body>
+    <img src="https://image3.mouthshut.com/images/imagesp/925084241s.jpg" alt="Image Description" style="width: 10%;">
+    <h1>Sathyabama Book Recommender</h1>
+    <ul id="book-list">
+        {% for book in recommendations %}
+        <li class="book-item">
+            <h2>{{ book.title }}</h2>
+            <p><strong>Author:</strong> {{ book.author }}</p>
+            <p><strong>Genre:</strong> {{ book.genre }}</p>
+            <p><strong>Rating:</strong> {{ book.rating }}</p>
+            <p>{{ book.description }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

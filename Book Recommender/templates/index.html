@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Recommendations</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <img src="https://image3.mouthshut.com/images/imagesp/925084241s.jpg" alt="Image Description" style="width: 10%;">
+    <h1>Sathyabama Book Recommender</h1>
+    <form action="/get_recommendations" method="post">
+        <label for="author_name">Author Name:</label>
+        <input type="text" name="author_name" id="author_name" placeholder="Enter author name">
+        <br>
+        <label for="genre">Genre:</label>
+        <input type="text" name="genre" id="genre" placeholder="Enter genre">
+        <br>
+        <label for="min_rating">Minimum Rating:</label>
+        <input type="number" name="min_rating" id="min_rating" step="0.1" placeholder="Enter minimum rating">
+        <br>
+        <input type="submit" value="Get Recommendations">
+    </form>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
